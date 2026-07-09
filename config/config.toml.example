@@ -1,0 +1,8 @@
+# Merge these paths into an existing [sandbox_workspace_write] section.
+# Do not create a duplicate TOML table.
+
+[sandbox_workspace_write]
+writable_roots = [
+  "/absolute/path/to/your/Obsidian/Vault/Codex",
+  "/absolute/path/to/home/.codex/obsidian-context-memory",
+]

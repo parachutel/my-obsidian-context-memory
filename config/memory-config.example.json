@@ -1,0 +1,12 @@
+{
+  "vault_path": "/absolute/path/to/your/Obsidian/Vault",
+  "managed_root": "Codex",
+  "state_dir": "/absolute/path/to/home/.codex/obsidian-context-memory",
+  "max_results": 8,
+  "max_context_chars": 9000,
+  "hook_results": 4,
+  "hook_context_chars": 4500,
+  "excerpt_chars": 700,
+  "max_note_bytes": 262144,
+  "shared_roots": []
+}

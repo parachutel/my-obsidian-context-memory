@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "timeout": 8,
+            "statusMessage": "Loading Obsidian project memory"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "timeout": 8,
+            "statusMessage": "Recalling Obsidian task context"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "timeout": 8,
+            "statusMessage": "Saving Obsidian task checkpoint"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian Context Memory"
+  short_description: "Recall and archive Codex project memory in Obsidian"
+  default_prompt: "Use $obsidian-context-memory to recall relevant project context and archive durable outcomes from this task."
