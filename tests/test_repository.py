@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -25,8 +26,16 @@ class RepositoryTests(unittest.TestCase):
 
     def test_repository_has_no_machine_specific_paths_or_cache_files(self) -> None:
         forbidden = ["/" + "Users" + "/", "sheng" + "li", "Sheng" + "‘s Space"]
-        for path in REPO_ROOT.rglob("*"):
-            if not path.is_file() or ".git" in path.parts:
+        tracked = subprocess.run(
+            ["git", "ls-files"],
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.splitlines()
+        for relative in tracked:
+            path = REPO_ROOT / relative
+            if not path.is_file():
                 continue
             self.assertNotIn(path.suffix, {".pyc", ".pyo"})
             if path.suffix in {".md", ".py", ".json", ".toml", ".yaml", ".yml"}:
