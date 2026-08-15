@@ -6,3 +6,9 @@ writable_roots = [
   "/absolute/path/to/your/Obsidian/Vault/Codex",
   "/absolute/path/to/home/.codex/obsidian-context-memory",
 ]
+
+# Recommended coexistence policy: Obsidian is authoritative and Codex local
+# Memories are disabled. If you intentionally keep them auxiliary, enable the
+# feature and disable generation or injection explicitly.
+[features]
+memories = false

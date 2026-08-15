@@ -7,4 +7,5 @@
 - Before the final answer, archive concise durable outcomes; record unfinished work as `partial` or `blocked`. Mark turns with no durable value as skipped.
 - Never store secrets, credentials, `.env` contents, full transcripts, hidden reasoning, or unrelated personal data in the Vault.
 - Do not modify ordinary Vault notes or `.obsidian/workspace.json`; write only under the configured `Codex/` namespace unless the user explicitly opts a note in.
+- Treat Obsidian as the authoritative durable layer. Keep Codex local Memories disabled or auxiliary, and validate any injected memory before use.
 <!-- obsidian-context-memory:end -->

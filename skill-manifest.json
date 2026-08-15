@@ -1,0 +1,8 @@
+{
+  "name": "obsidian-context-memory",
+  "version": "2.0.0",
+  "schema_version": 2,
+  "runtime": "scripts/obsidian_memory.py",
+  "minimum_python": "3.9",
+  "canonical_repository": "https://github.com/parachutel/my-obsidian-context-memory"
+}

@@ -2,11 +2,18 @@
   "vault_path": "/absolute/path/to/your/Obsidian/Vault",
   "managed_root": "Codex",
   "state_dir": "/absolute/path/to/home/.codex/obsidian-context-memory",
+  "codex_home": "/absolute/path/to/home/.codex",
+  "skill_path": "/absolute/path/to/home/.agents/skills/obsidian-context-memory",
   "max_results": 8,
   "max_context_chars": 9000,
   "hook_results": 4,
   "hook_context_chars": 4500,
   "excerpt_chars": 700,
   "max_note_bytes": 262144,
+  "min_recall_score": 2.0,
+  "max_results_per_project": 6,
+  "cross_project_task_min_bm25": 1.75,
+  "cache_note_threshold": 2000,
+  "cache_latency_ms": 500,
   "shared_roots": []
 }

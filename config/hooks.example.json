@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "command": "/usr/bin/env python3 \"$HOME/.agents/skills/obsidian-context-memory/scripts/obsidian_memory.py\" --config \"${CODEX_HOME:-$HOME/.codex}/obsidian-context-memory/config.json\" hook",
             "timeout": 8,
             "statusMessage": "Loading Obsidian project memory"
           }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "command": "/usr/bin/env python3 \"$HOME/.agents/skills/obsidian-context-memory/scripts/obsidian_memory.py\" --config \"${CODEX_HOME:-$HOME/.codex}/obsidian-context-memory/config.json\" hook",
             "timeout": 8,
             "statusMessage": "Recalling Obsidian task context"
           }
@@ -30,9 +30,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/usr/bin/env python3 \"${CODEX_HOME:-$HOME/.codex}/skills/obsidian-context-memory/scripts/obsidian_memory.py\" hook",
+            "command": "/usr/bin/env python3 \"$HOME/.agents/skills/obsidian-context-memory/scripts/obsidian_memory.py\" --config \"${CODEX_HOME:-$HOME/.codex}/obsidian-context-memory/config.json\" hook",
             "timeout": 8,
-            "statusMessage": "Saving Obsidian task checkpoint"
+            "statusMessage": "Checking Obsidian task archive"
           }
         ]
       }
