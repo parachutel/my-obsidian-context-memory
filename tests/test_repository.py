@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SKILL = REPO_ROOT / "skill" / "obsidian-context-memory"
+SKILL = REPO_ROOT
 
 
 class RepositoryTests(unittest.TestCase):
@@ -19,6 +19,10 @@ class RepositoryTests(unittest.TestCase):
         self.assertTrue((SKILL / "agents" / "openai.yaml").is_file())
         self.assertTrue((SKILL / "references" / "schema.md").is_file())
         self.assertTrue((SKILL / "scripts" / "obsidian_memory.py").is_file())
+        manifest = json.loads((SKILL / "skill-manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["name"], "obsidian-context-memory")
+        self.assertRegex(manifest["version"], r"^\d+\.\d+\.\d+$")
+        self.assertFalse((SKILL / "skill" / "obsidian-context-memory" / "SKILL.md").exists())
 
     def test_examples_are_valid_json(self) -> None:
         for path in (REPO_ROOT / "config").glob("*.json"):
